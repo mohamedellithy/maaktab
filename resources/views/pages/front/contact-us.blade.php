@@ -10,37 +10,8 @@
  {{  $page->title }}
 @endsection
 
-@push('style')
-<style>
-    .register-form input,
-    .register-form textarea{
-        border-radius: 44px;
-        text-align: right;
-        background-color: #eee;
-    }
-    .field-phone select {
-        width: 66%;
-        background-color: #eee;
-    }
-    .register-form .btn {
-        padding: 10px 18px;
-        border-radius: 35px;
-        margin: 10px 0px;
-    }
-    .register-form .form-group {
-        padding: 0px 0px 0px 0px;
-    }
-    .about-area.about-bg{
-        margin-top: 30px;
-    }
-    .section-title-two.white-title .title{
-        padding-bottom: 12px;
-    }
-</style>
-@endpush
-
 @section('content')
-<section class="about-area about-bg" style="margin-top:50px">
+<section class="about-area about-bg" style="margin-top:150px">
     <div class="container">
         <div class="row align-items-center justify-content-center register-form">
             <div class="col-lg-6">
@@ -91,7 +62,7 @@
                                                     <option value="{{ $code }}" @if($code == (old('phone_code') ?: '966') ) selected @endif>{{ $phone_code }}</option>
                                                 @endforeach
                                             </select>
-                                            <input name="phone" placeholder="رقم الجوال" value="{{ old('phone') }}" type="tel" class="form-control" required/>
+                                            <input name="phone" placeholder="رقم الجوال" value="{{ old('phone') }}" type="tel" class="form-control phone" required/>
                                         </div>
                                         @error('phone')
                                             <span class="text-danger w-100 fs-6" style="color: #a21212 !important;">{{ $message }}</span>
@@ -151,6 +122,8 @@
         </div>
     </div>
 </section>
+<br/>
+<br/>
 @if(get_settings('website_location_map'))
     <div class="contact-map">
         {!! get_settings('website_location_map') ?: '' !!}
@@ -158,3 +131,65 @@
     </div>
 @endif
 @endsection
+
+@push('style')
+<style>
+    .register-form input,
+    .register-form textarea{
+        border-radius: 44px;
+        text-align: right;
+        background-color: #eee;
+    }
+    .field-phone select {
+        width: 66%;
+        background-color: #eee;
+    }
+    .register-form .btn {
+        padding: 10px 18px;
+        border-radius: 35px;
+        margin: 10px 0px;
+    }
+    .register-form .form-group {
+        padding: 0px 0px 0px 0px;
+    }
+    .about-area.about-bg{
+        margin-top: 30px;
+    }
+    .section-title-two.white-title .title{
+        padding-bottom: 12px;
+    }
+    .ud-login{
+        margin-top:2%;
+    }
+    .ud-login-wrapper{
+        padding: 35px;
+        box-shadow: 0px 0px 0px 0px !important;
+    }
+    .phone-cdoe{
+        width:19% !important;
+        border-left: 0px !important;
+        border-radius: 0px 25px 25px 0px !important;
+    }
+    .phone{
+        direction: rtl;
+        border-radius: 25px 0px 0px 25px !important;
+    }
+    input,select{
+        height: 52px
+    }
+    .choose-content-two{
+        padding: 2% 0% 0% 7%;
+    }
+    .register-form .form-group {
+        padding: 13px;
+    }
+    iframe{
+        width: 100% !important;
+        -webkit-filter: grayscale(100%);
+        -moz-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+        -o-filter: grayscale(100%);
+         filter: grayscale(100%);
+    }
+</style>
+@endpush

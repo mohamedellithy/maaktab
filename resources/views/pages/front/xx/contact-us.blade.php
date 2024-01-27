@@ -40,7 +40,7 @@
 @endpush
 
 @section('content')
-<section class="about-area about-bg" style="margin-top:50px">
+<section class="about-area about-bg" style="margin-top:150px">
     <div class="container">
         <div class="row align-items-center justify-content-center register-form">
             <div class="col-lg-6">
