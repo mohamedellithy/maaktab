@@ -10,9 +10,9 @@
 @endsection
 
 @section('content')
-<section class="about-area about-bg" style="margin-top:50px">
+<section class="about-area about-bg" style="margin-top:150px">
     <div class="container">
-        <div class="row align-items-center justify-content-center">
+        <div class="row justify-content-center">
             @if(!$page)
                 <!-- Error -->
                 <div class="container-xxl container-p-y" style="text-align: center;">
