@@ -1,0 +1,14 @@
+{
+    "The :attribute must contain at least one letter.": "The :attribute must contain at least one letter.",
+    "The :attribute must contain at least one number.": "The :attribute must contain at least one number.",
+    "The :attribute must contain at least one symbol.": "The :attribute must contain at least one symbol.",
+    "The :attribute must contain at least one uppercase and one lowercase letter.": "The :attribute must contain at least one uppercase and one lowercase letter.",
+    "The given :attribute has appeared in a data leak. Please choose a different :attribute.": "The given :attribute has appeared in a data leak. Please choose a different :attribute.",
+    "Reset Password Notification": "إعادة تعيين كلمة المرور",
+    "You are receiving this email because we received a password reset request for your account.": "أنت تتلقى هذا البريد الإلكتروني لأننا تلقينا طلب إعادة تعيين كلمة المرور لحسابك.",
+    "Reset Password": "إعادة تعيين كلمة المرور",
+    "If you did not request a password reset, no further action is required.": "إذا لم تطلب إعادة تعيين كلمة المرور ، فلا داعي لاتخاذ أي إجراء آخر.",
+    "This password reset link will expire in :count minutes.": "ستنتهي صلاحية رابط إعادة تعيين كلمة المرور في :count الدقائق",
+    "If you're having trouble clicking the \"Reset Password\" button, copy and paste the URL below into your web browser:": "إذا كنت تواجه مشكلة في النقر فوق الزر إعادة تعيين كلمة المرور ، فانسخ عنوان URL أدناه والصقه في متصفح الويب لديك:",
+    "Hello!": "مرحبا  !"
+}
