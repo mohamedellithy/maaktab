@@ -125,9 +125,7 @@ Route::get('test-more',function(){
         )),
     );
 
-    $response =  Http::asForm()->withOptions([
-        'verify' => false
-    ])->withHeaders([
+    $response =  Http::asForm()->withHeaders([
         'Content-Type' => 'application/x-www-form-urlencoded',
         'accept'       => 'application/json',
     ])->post("https://menacart.fintesa.co/menacart-server/payment-api/".$secretKey,$data);
