@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\MediaController;
@@ -14,10 +15,10 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\ProposalController;
 use App\Http\Controllers\MediaAjaxController;
-use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\DiscussionController;
-use App\Http\Controllers\Front\FrontController;
+use App\Http\Controllers\ApplicationController;
 
+use App\Http\Controllers\Front\FrontController;
 use App\Http\Controllers\ServiceOrderController;
 use App\Http\Controllers\Front\StreamingController;
 
@@ -110,6 +111,27 @@ Route::post('ajax-apply-coupon',[FrontController::class,'ajax_apply_coupon'])->n
 
 Route::get('generate/sitemap',[FrontController::class,'generate_sitemap']);
 
-Route::get('/{slug}',[FrontController::class,'custom_page']);
+// Route::get('/{slug}',[FrontController::class,'custom_page']);
+
+Route::get('test-more',function(){
+    $secretKey = "sk_10c11209-c4f7-4645-b53f-8230da7df73f"; // Replace with your actual secret key
+    $data = array(
+        'currency' => 'usd',
+        'items_list' => json_encode(array(
+            array('item' => 'ball', 'price' => 200),
+            array('item' => 'saw', 'price' => 300),
+            array('item' => 'glass', 'price' => 3000),
+            array('item' => 'lighter', 'price' => 1500)
+        )),
+    );
+
+    $response =  Http::asForm()->withOptions([
+        'verify' => false
+    ])->withHeaders([
+        'Content-Type' => 'application/x-www-form-urlencoded',
+        'accept'       => 'application/json',
+    ])->post("https://menacart.fintesa.co/menacart-server/payment-api/".$secretKey,$data);
+    dd($response->body());
+});
 
 
