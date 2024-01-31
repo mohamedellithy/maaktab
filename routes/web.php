@@ -114,7 +114,31 @@ Route::get('generate/sitemap',[FrontController::class,'generate_sitemap']);
 // Route::get('/{slug}',[FrontController::class,'custom_page']);
 
 Route::get('test-more',function(){
+    // $secretKey = "sk_10c11209-c4f7-4645-b53f-8230da7df73f"; // Replace with your actual secret key
+    // $data = array(
+    //     'currency' => 'usd',
+    //     'items_list' => json_encode(array(
+    //         array('item' => 'ball', 'price' => 200),
+    //         array('item' => 'saw', 'price' => 300),
+    //         array('item' => 'glass', 'price' => 3000),
+    //         array('item' => 'lighter', 'price' => 1500)
+    //     )),
+    // );
+
+    // $response =  Http::asForm()->withHeaders([
+    //     'Content-Type' => 'application/x-www-form-urlencoded',
+    //     'accept'       => 'application/json',
+    // ])->post("https://menacart.fintesa.co/menacart-server/payment-api/".$secretKey,$data);
+    // dd($response->body());
+
     $secretKey = "sk_10c11209-c4f7-4645-b53f-8230da7df73f"; // Replace with your actual secret key
+    $url = "https://menacart.fintesa.co/menacart-server/payment-api/$secretKey";
+
+    $headers = array(
+        'Content-Type: application/x-www-form-urlencoded',
+        'accept: application/json',
+    );
+
     $data = array(
         'currency' => 'usd',
         'items_list' => json_encode(array(
@@ -125,11 +149,25 @@ Route::get('test-more',function(){
         )),
     );
 
-    $response =  Http::asForm()->withHeaders([
-        'Content-Type' => 'application/x-www-form-urlencoded',
-        'accept'       => 'application/json',
-    ])->post("https://menacart.fintesa.co/menacart-server/payment-api/".$secretKey,$data);
-    dd($response->body());
+    $ch = curl_init($url);
+
+    curl_setopt($ch, CURLOPT_POST, 1);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+
+    $response = curl_exec($ch);
+
+    if ($response === false) {
+        // Handle any errors
+        echo 'Curl error: ' . curl_error($ch);
+    } else {
+        $responseData = json_decode($response, true);
+        // Handle the response data
+        var_dump($responseData);
+    }
+
+    curl_close($ch);
 });
 
 
