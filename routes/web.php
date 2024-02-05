@@ -83,12 +83,13 @@ Route::get('/',[FrontController::class,'index'])->name('home');
 Route::get('/projects',[FrontController::class,'projects_show'])->name('projects_show');
 Route::get('/project/{slug}',[FrontController::class,'single_project'])->name('single_project');
 Route::get('/services',[FrontController::class,'services'])->name('services');
-Route::get('/application-form/{application_id}/{selected_id}/{selected}',[FrontController::class,'application_form'])->name('application_form');
 Route::get('/service/{slug}',[FrontController::class,'single_service'])->name('single_service');
-Route::post('application-submit/{application_id}/{selected_id}/{selected}',[FrontController::class,'application_submit'])->name('application-submit');
 Route::get('/contact-us',[FrontController::class,'contact_us'])->name('contact-us');
 
 Route::group(['middleware' => 'auth'],function(){
+    Route::get('/application-form/{application_id}/{selected_id}/{selected}',[FrontController::class,'application_form'])->name('application_form');
+    Route::post('application-submit/{application_id}/{selected_id}/{selected}',[FrontController::class,'application_submit'])->name('application-submit');
+
     Route::get('my-account',[FrontController::class,'my_account'])->name('my-account');
     Route::get('my-orders',[FrontController::class,'my_orders'])->name('my-orders');
     Route::get('my-payments',[FrontController::class,'my_payments'])->name('my-payments');
@@ -113,61 +114,8 @@ Route::get('generate/sitemap',[FrontController::class,'generate_sitemap']);
 
 // Route::get('/{slug}',[FrontController::class,'custom_page']);
 
-Route::get('test-more',function(){
-    // $secretKey = "sk_10c11209-c4f7-4645-b53f-8230da7df73f"; // Replace with your actual secret key
-    // $data = array(
-    //     'currency' => 'usd',
-    //     'items_list' => json_encode(array(
-    //         array('item' => 'ball', 'price' => 200),
-    //         array('item' => 'saw', 'price' => 300),
-    //         array('item' => 'glass', 'price' => 3000),
-    //         array('item' => 'lighter', 'price' => 1500)
-    //     )),
-    // );
-
-    // $response =  Http::asForm()->withHeaders([
-    //     'Content-Type' => 'application/x-www-form-urlencoded',
-    //     'accept'       => 'application/json',
-    // ])->post("https://menacart.fintesa.co/menacart-server/payment-api/".$secretKey,$data);
-    // dd($response->body());
-
-    $secretKey = "sk_10c11209-c4f7-4645-b53f-8230da7df73f"; // Replace with your actual secret key
-    $url = "https://menacart.fintesa.co/menacart-server/payment-api/$secretKey";
-
-    $headers = array(
-        'Content-Type: application/x-www-form-urlencoded',
-        'accept: application/json',
-    );
-
-    $data = array(
-        'currency' => 'usd',
-        'items_list' => json_encode(array(
-            array('item' => 'ball', 'price' => 200),
-            array('item' => 'saw', 'price' => 300),
-            array('item' => 'glass', 'price' => 3000),
-            array('item' => 'lighter', 'price' => 1500)
-        )),
-    );
-
-    $ch = curl_init($url);
-
-    curl_setopt($ch, CURLOPT_POST, 1);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-    $response = curl_exec($ch);
-
-    if ($response === false) {
-        // Handle any errors
-        echo 'Curl error: ' . curl_error($ch);
-    } else {
-        $responseData = json_decode($response, true);
-        // Handle the response data
-        var_dump($responseData);
-    }
-
-    curl_close($ch);
-});
+// Route::get('test-more',function(){
+    
+// });
 
 
