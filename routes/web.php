@@ -112,7 +112,7 @@ Route::post('ajax-apply-coupon',[FrontController::class,'ajax_apply_coupon'])->n
 
 Route::get('generate/sitemap',[FrontController::class,'generate_sitemap']);
 
-// Route::get('/{slug}',[FrontController::class,'custom_page']);
+Route::get('/{slug}',[FrontController::class,'custom_page']);
 
 // Route::get('test-more',function(){
     

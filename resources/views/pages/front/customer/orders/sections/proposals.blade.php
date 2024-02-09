@@ -52,13 +52,13 @@
                 @if($proposal->status == 'wait')
                     <tr>
                         <td colspan="5" class="d-flex">
-                            <form method="post" style="margin-left:10px" action="{{ route('accept-proposal',['proposal_id' => $proposal->id]) }}">
+                            <form class="accept" method="post" style="margin-left:10px" action="{{ route('accept-proposal',['proposal_id' => $proposal->id]) }}">
                                 @csrf
                                 <button class="btn btn-success btn-sm">
                                     قبول العرض
                                 </button>
                             </form>
-                            <form method="post" style="margin-left:10px" action="{{ route('refuse-proposal',['proposal_id' => $proposal->id]) }}">
+                            <form class="refused" method="post" style="margin-left:10px" action="{{ route('refuse-proposal',['proposal_id' => $proposal->id]) }}">
                                 @csrf
                                 <button class="btn btn-danger btn-sm">
                                     رفض العرض
@@ -71,3 +71,15 @@
         @endforeach
     </div>
 </div>
+<script>
+    jQuery('form.accept').submit(function(e){
+        if(!confirm('هل بالفعل تريد قبول العرض')){
+            e.preventDefault();
+        }
+    });
+    jQuery('form.refused').submit(function(e){
+        if(!confirm('هل بالفعل تريد رفض العرض')){
+            e.preventDefault();
+        }
+    });
+</script>

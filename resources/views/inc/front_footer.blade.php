@@ -12,7 +12,7 @@
     <div class="ud-footer-widgets ">
         <div class="container ">
             <div class="row ">
-                <div class="col-xl-3 col-lg-4 col-md-6 ">
+                <div class="col-md-6">
                     <div class="ud-widget ">
                         <a href="index.html " class="ud-footer-logo ">
                             <img src="{{ asset('logo.png') }} " alt="logo " />
@@ -40,9 +40,9 @@
                     </div>
                 </div>
 
-                {{-- <div class="col-xl-2 col-lg-2 col-md-6 col-sm-6 ">
+                <div class="col-md-6">
                     <div class="ud-widget ">
-                        <h5 class="ud-widget-title ">About Us</h5>
+                        <h5 class="ud-widget-title ">روابط مهمة</h5>
                         <ul class="ud-widget-links ">
                             @forelse(ActivePagesMenus(['position','!=' , 'header']) as $page)
                                 @if($page->position != 'hidden')
@@ -56,7 +56,7 @@
                             @endforelse
                         </ul>
                     </div>
-                </div> --}}
+                </div>
 
                 {{-- <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 ">
                     <div class="ud-widget ">
@@ -83,23 +83,9 @@
     <div class="ud-footer-bottom ">
         <div class="container ">
             <div class="row ">
-                <div class="col-md-8 ">
-                    <ul class="ud-footer-bottom-left ">
-                        <li>
-                            <a href="javascript:void(0) ">Privacy policy</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0) ">Support policy</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0) ">Terms of service</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4 ">
-                    <p class="ud-footer-bottom-right ">
-                        Designed and Developed by
-                        <a href="https://uideck.com " rel="nofollow ">Mohamed Ellithy</a>
+                <div class="col-md-12 text-center">
+                    <p class="ud-footer-bottom-right text-center">
+                       جميع الحقوق محفوظة لمنصة مكتب {{ '©'.date('Y') }}
                     </p>
                 </div>
             </div>

@@ -35,7 +35,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                     <div class="col-lg-12 ">
                         <div class="ud-brands">
                             <div class="ud-title wow fadeIn">
-                                <h5 style="color: #692b91;">
+                                <h5 style="color: #692b91;text-align:center">
                                     {{ isset($page->content['partner_banner']['sub_heading']) ? $page->content['partner_banner']['sub_heading'] : 'موثوق به من قبل أكثر من 1000 شركة فى منظقة الشرق الأوسط' }}
                                 </h5>
                             </div>
@@ -119,7 +119,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                             <div class="col-xl-3 col-lg-3 col-sm-6 ">
                                 <div class="ud-single-feature wow fadeInUp " data-wow-delay=".{{ $counter }}s ">
                                     <div class="ud-feature-icon ">
-                                        <i class="lni lni-layers "></i>
+                                        <i class="lni {{ isset($page->content['introduce_banner']['feature_icon'][$item]) ? $page->content['introduce_banner']['feature_icon'][$item] : 'lni-layers' }} "></i>
                                     </div>
                                     <div class="ud-feature-content ">
                                         <h3 class="ud-feature-title ">
@@ -227,7 +227,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                         <div class="ud-contact-content-wrapper ">
                             <div class="ud-contact-title ">
                                 <span>
-                                    تواصل معنا
+                                    اطلب خدمتك
                                 </span>
                                 <h2>
                                     {{ isset($page->content['contact_banner']['heading']) ? $page->content['contact_banner']['heading'] : 'قم بتواصل معنا' }}
@@ -237,7 +237,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                                 </p>
                             </div>
                             <div class="ud-contact-info-wrapper ">
-                                <div class="ud-single-info ">
+                                {{-- <div class="ud-single-info ">
                                     <div class="ud-info-icon ">
                                         <i class="lni lni-map-marker "></i>
                                     </div>
@@ -247,7 +247,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                                             {{ isset($page->content['contact_banner']['location']) ? $page->content['contact_banner']['location'] : '' }}
                                         </p>
                                     </div>
-                                </div>
+                                </div> --}}
                                 <div class="ud-single-info ">
                                     <div class="ud-info-icon ">
                                         <i class="lni lni-envelope "></i>
@@ -281,12 +281,12 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                                     <input type="text " name="phone " placeholder="+885 1254 5211 552 " />
                                 </div>
                                 <div class="ud-form-group ">
-                                    <label for="message ">الرسالة *</label>
-                                    <textarea name="message " rows="1 " placeholder="type your message here "></textarea>
+                                    <label for="message ">ماهو طلبك؟ *</label>
+                                    <textarea name="message " rows="1 " placeholder="قم بتسجيل طلبك"></textarea>
                                 </div>
                                 <div class="ud-form-group mb-0 ">
                                     <button type="submit " class="ud-main-btn ">
-                                        ارسال الرسالة
+                                        ارسال الطلب
                                     </button>
                                 </div>
                             </form>
@@ -337,7 +337,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
             background-repeat: no-repeat;
             background-position: center;
             text-align: center;
-            box-shadow: -27px 29px 0px 0px #692b91;
+           /* box-shadow: -27px 29px 0px 0px #692b91;*/
             position: relative;
         }
         .shap-image .main-shap{

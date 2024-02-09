@@ -89,4 +89,7 @@
         }
     };
     Messages.initailize();
+
+    
 </script>
+<script type="text/javascript" src="{{ asset('front/assets/js/fslightbox.js') }}"></script>

@@ -37,7 +37,27 @@ $logo_url = upload_assets(get_settings('website_logo'),true);
             text-align: right;
             direction: rtl;
         }
-
+        .btn-dark,
+        .btn-dark:hover {
+            color: #fff;
+            background-color: #414850;
+            border-color: #52565a;
+        }
+        .ud-newsletter-box{
+            background:var(--primary-color) !important;
+        }
+        .icon-service{
+            color: beige !important;
+        }
+        .dates-lists li{
+            background-color: #7a489a !important;
+        }
+        .ud-widget .ud-footer-logo{
+            margin-bottom: 0px !important;
+        }
+        .ud-widget .ud-footer-logo {
+            max-width: 100px;
+        }
     </style>
     @stack('style')
 </head>

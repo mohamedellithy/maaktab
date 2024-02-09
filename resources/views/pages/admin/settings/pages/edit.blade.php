@@ -224,7 +224,7 @@
                         <!-- ------------------------------------------------------------------------------------->
                         <!-- ------------------------------------------------------------------------------------->
                         <!-- services Bannerr -->
-                        {{-- <div class="card mb-4">
+                        <!-- <div class="card mb-4">
                             <div class="card-body">
                                 <div class="mb-3">
                                     <label class="form-label" for="basic-default-company"> خدماتنا</label>
@@ -255,7 +255,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> --}}
+                        </div> -->
                         <!-- ------------------------------------------------------------------------------------->
                         <!-- ------------------------------------------------------------------------------------->
                         <!-- ------------------------------------------------------------------------------------->
@@ -305,6 +305,12 @@
                                                             </td>
                                                             <td>
                                                                 <div class="mb-3">
+                                                                    <label>الايكونة</label>
+                                                                    <input name="content[introduce_banner][feature_icon][0]" @isset($page->content['introduce_banner']['feature_icon'][0]) value="{{ $page->content['introduce_banner']['feature_icon'][0] }}" @endisset  class="form-control"/>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="mb-3">
                                                                     <label>وصف الميزة</label>
                                                                     <textarea rows="3" name="content[introduce_banner][feature_description][0]" class="form-control">
                                                                         @isset($page->content['introduce_banner']['feature_description'][0])
@@ -319,6 +325,12 @@
                                                                 <div class="mb-3">
                                                                     <label>عنوان الميزة</label>
                                                                     <input name="content[introduce_banner][feature_title][1]" @isset($page->content['introduce_banner']['feature_title'][1]) value="{{ $page->content['introduce_banner']['feature_title'][1] }}" @endisset  class="form-control"/>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="mb-3">
+                                                                    <label>الايكونة</label>
+                                                                    <input name="content[introduce_banner][feature_icon][1]" @isset($page->content['introduce_banner']['feature_icon'][1]) value="{{ $page->content['introduce_banner']['feature_icon'][1] }}" @endisset  class="form-control"/>
                                                                 </div>
                                                             </td>
                                                             <td>
@@ -341,6 +353,12 @@
                                                             </td>
                                                             <td>
                                                                 <div class="mb-3">
+                                                                    <label>الايكونة</label>
+                                                                    <input name="content[introduce_banner][feature_icon][2]" @isset($page->content['introduce_banner']['feature_icon'][2]) value="{{ $page->content['introduce_banner']['feature_icon'][2] }}" @endisset  class="form-control"/>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="mb-3">
                                                                     <label>وصف الميزة</label>
                                                                     <textarea rows="3" name="content[introduce_banner][feature_description][2]" class="form-control">
                                                                         @isset($page->content['introduce_banner']['feature_description'][2])
@@ -355,6 +373,12 @@
                                                                 <div class="mb-3">
                                                                     <label>عنوان الميزة</label>
                                                                     <input name="content[introduce_banner][feature_title][3]" @isset($page->content['introduce_banner']['feature_title'][3]) value="{{ $page->content['introduce_banner']['feature_title'][3] }}" @endisset  class="form-control"/>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <div class="mb-3">
+                                                                    <label>الايكونة</label>
+                                                                    <input name="content[introduce_banner][feature_icon][3]" @isset($page->content['introduce_banner']['feature_icon'][3]) value="{{ $page->content['introduce_banner']['feature_icon'][3] }}" @endisset  class="form-control"/>
                                                                 </div>
                                                             </td>
                                                             <td>
@@ -381,7 +405,7 @@
                         <!-- ------------------------------------------------------------------------------------->
                         <!-- ------------------------------------------------------------------------------------->
                         <!-- products Bannerr -->
-                        {{-- <div class="card mb-4">
+                        <!-- <div class="card mb-4">
                             <div class="card-body">
                                 <div class="mb-3">
                                     <label class="form-label" for="basic-default-company"> منتجاتنا</label>
@@ -408,7 +432,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> --}}
+                        </div> -->
                         <!-- ------------------------------------------------------------------------------------->
                         <!-- ------------------------------------------------------------------------------------->
                         <!-- ------------------------------------------------------------------------------------->
@@ -455,7 +479,7 @@
                         <!-- ------------------------------------------------------------------------------------->
                         <!-- ------------------------------------------------------------------------------------->
                         <!-- why_choice_us Bannerr -->
-                        {{-- <div class="card mb-4">
+                        <!-- <div class="card mb-4">
                             <div class="card-body">
                                 <div class="mb-3">
                                     <label class="form-label" for="basic-default-company"> لماذا نحن</label>
@@ -557,7 +581,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> --}}
+                        </div> -->
                         <!-- ------------------------------------------------------------------------------------->
                         <!-- ------------------------------------------------------------------------------------->
                         <!-- ------------------------------------------------------------------------------------->

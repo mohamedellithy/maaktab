@@ -33,7 +33,7 @@
                                 {{ $project->short_description }}
                             </p>
                             <div class="lists-btns">
-                                <a href="#" class="card-hover__link btn btn-warning btn-sm">
+                                <a href="{{ url('project/'.$project->slug) }}" class="card-hover__link btn btn-warning btn-sm">
                                     <span style="color:#121212">طلب مشروع مماثل</span>
                                 </a>
                             </div>
