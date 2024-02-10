@@ -15,6 +15,7 @@
                     </div>
                     <form method="post" action="{{ route('password.update') }}" class="ud-login-form">
                         @csrf
+                        <input type="hidden" name="token" value="{{ $token }}">
                         <div class="ud-form-group">
                             <input
                             type="email"
