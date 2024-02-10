@@ -38,7 +38,7 @@ use App\Http\Controllers\Front\StreamingController;
 // });
 
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 
 Route::group(['middleware' => 'admin_auth','as' => 'admin.','prefix'=>'admin'],function(){
