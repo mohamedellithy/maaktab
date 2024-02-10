@@ -55,11 +55,11 @@
               </ul>
             </div> --}}
 
-            <a class="forget-pass" href="javascript:void(0)">
+            <a class="forget-pass" href="{{ route('password.request') }}">
               هل نسيت كلمة المرور ؟
             </a>
             <p class="signup-option">
-              هل نسيت كلمة المرور ؟ <a href="javascript:void(0)"> انشاء الحساب </a>
+              ليس لديك حساب مسجل ؟ <a href="{{ route('register') }}"> انشاء الحساب </a>
             </p>
           </div>
         </div>

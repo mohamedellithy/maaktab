@@ -28,7 +28,7 @@
                     </button>
                 </div>
             </form>
-            <a class="forget-pass" href="{{ route('password.request') }}">
+            <a class="forget-pass" href="{{ route('login') }}">
               تسجيل الدخول اذا كان لك حساب بالفعل 
             </a>
             <p class="signup-option">

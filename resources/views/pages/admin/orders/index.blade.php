@@ -55,7 +55,7 @@ $rows   = request()->query('rows')   ?: 10;
                         <tr>
                             <th></th>
                             <th>كود الطلبية</th>
-                            <th>المنتج</th>
+                            <th>الطلب</th>
                             <th>العميل</th>
                             <th>اجمالى سعر الطلبية</th>
                             <th>حالة الطلبية</th>
@@ -70,7 +70,13 @@ $rows   = request()->query('rows')   ?: 10;
                                 <td>{{ $order->id }}</td>
                                 <td class="width-16">{{ $order->order_no }}</td>
                                 <td class="width-16">
-                                    {{ $order->order_items ? $order->order_items->product->name : '-' }}
+                                    @if($order->modelable)
+                                        @if($order->modelable_type == "App\Models\Project")
+                                            مشروع مماثل ل ({{ $order->modelable->name }})
+                                        @else
+                                            طلب خدمة  ( {{ $order->modelable->name }} )
+                                        @endif
+                                    @endif
                                 </td>
                                 <td class="width-16">
                                     {{ $order->customer->name }}

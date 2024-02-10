@@ -159,6 +159,31 @@
                                 <h5 class="heading"> الطلبية</h5>
                             </div>
                             <div class="mb-3">
+                                <label class="form-label" for="basic-default-fullname">المشروع</label>
+                                <h6 style="line-height: 1.3em;">
+                                    @if($order->modelable)
+                                        @if($order->modelable_type == "App\Models\Project")
+                                            مشروع مماثل ل ({{ $order->modelable->name }})
+                                        @else
+                                            طلب خدمة  ( {{ $order->modelable->name }} )
+                                        @endif
+                                    @endif
+                                </h6>
+                                @if($order->modelable)
+                                    @if($order->modelable_type == "App\Models\Project")
+                                        <a href="{{ url('project/'.$order->modelable->slug) }}" target="_blank" class="btn btn-dark btn-sm">
+                                            <i class="lni lni-eye"></i>
+                                            الاطلاع علي المشروع
+                                        </a>
+                                    @else
+                                        <a href="{{ url('service/'.$order->modelable->slug) }}" target="_blank" class="btn btn-dark btn-sm">
+                                            <i class="lni lni-eye"></i>
+                                            الاطلاع على الخدمة
+                                        </a>
+                                    @endif
+                                @endif
+                            </div>
+                            <div class="mb-3">
                                 <label class="form-label" for="basic-default-fullname">كود الطلبية</label>
                                 <h6 style="line-height: 1.3em;">{{ $order->order_no }}</h6>
                             </div>
