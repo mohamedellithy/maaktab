@@ -86,7 +86,7 @@ class RegisterController extends Controller
             'phone'     => $data['phone']
         ]);
 
-        $user->sendEmailVerificationNotification();
+        // $user->sendEmailVerificationNotification();
 
         return $user;
     }

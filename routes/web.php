@@ -38,7 +38,7 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 // });
 
 
-Auth::routes(['verify' => true]);
+Auth::routes();
 
 
 Route::group(['middleware' => 'admin_auth','as' => 'admin.','prefix'=>'admin'],function(){
@@ -86,12 +86,12 @@ Route::get('/services',[FrontController::class,'services'])->name('services');
 Route::get('/service/{slug}',[FrontController::class,'single_service'])->name('single_service');
 Route::get('/contact-us',[FrontController::class,'contact_us'])->name('contact-us');
 
-Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
-    $request->fulfill();
-    return redirect('/');
-})->middleware(['auth'])->name('verification.verify');
+// Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+//     $request->fulfill();
+//     return redirect('/');
+// })->middleware(['auth'])->name('verification.verify');
 
-Route::group(['middleware' => ['auth','verified']],function(){
+Route::group(['middleware' => ['auth']],function(){
     Route::get('/application-form/{application_id}/{selected_id}/{selected}',[FrontController::class,'application_form'])->name('application_form');
     Route::post('application-submit/{application_id}/{selected_id}/{selected}',[FrontController::class,'application_submit'])->name('application-submit');
 
