@@ -21,7 +21,7 @@ use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\Front\FrontController;
 use App\Http\Controllers\ServiceOrderController;
 use App\Http\Controllers\Front\StreamingController;
-
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -85,6 +85,11 @@ Route::get('/project/{slug}',[FrontController::class,'single_project'])->name('s
 Route::get('/services',[FrontController::class,'services'])->name('services');
 Route::get('/service/{slug}',[FrontController::class,'single_service'])->name('single_service');
 Route::get('/contact-us',[FrontController::class,'contact_us'])->name('contact-us');
+
+Route::get('/email/verify/{id}/{hash}', function (EmailVerificationRequest $request) {
+    $request->fulfill();
+    return redirect('/');
+})->middleware(['auth'])->name('verification.verify');
 
 Route::group(['middleware' => ['auth','verified']],function(){
     Route::get('/application-form/{application_id}/{selected_id}/{selected}',[FrontController::class,'application_form'])->name('application_form');
