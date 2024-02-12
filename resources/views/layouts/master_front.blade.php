@@ -64,7 +64,7 @@ $logo_url = upload_assets(get_settings('website_logo'),true);
 
 <body>
 
-    <!-- preloader -->
+    {{-- <!-- preloader -->
     <div id="preloader">
         <div id="loading-center">
             <div class="loader">
@@ -73,7 +73,7 @@ $logo_url = upload_assets(get_settings('website_logo'),true);
             </div>
         </div>
     </div>
-    <!-- preloader-end -->
+    <!-- preloader-end --> --}}
 
 
 

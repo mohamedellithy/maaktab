@@ -15,7 +15,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
 
 @section('content')
     <!-- ====== Hero Start ====== -->
-    <section class="banner-top">
+    <section class="banner-top" style="background-color: #2eb6e7;">
         <div class="container-fluid">
             <div class="row ">
                 @if(isset($page->content['slider_banner']['enable']) && $page->content['slider_banner']['enable'] == 'active')
@@ -23,6 +23,12 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                 @else
                    <img style="height: 700px;" src="{{ asset('front/assets/images/banner/default-banner-slider.jpg') }}" />
                 @endif
+                <div class="banner-heading">
+                    <h3 class="wow fadeInUp" data-wow-delay=".9s ">
+                        منصة واحدة لكل أعمالك التسويقية و الادارية
+                    </h3>
+                </div>
+                <img class="overall-image wow fadeInUp" data-wow-delay=".5s " src="{{ asset('banners/5.png') }}"/>
             </div>
         </div>
     </section>
@@ -237,17 +243,6 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                                 </p>
                             </div>
                             <div class="ud-contact-info-wrapper ">
-                                {{-- <div class="ud-single-info ">
-                                    <div class="ud-info-icon ">
-                                        <i class="lni lni-map-marker "></i>
-                                    </div>
-                                    <div class="ud-info-meta ">
-                                        <h5>عنوانا</h5>
-                                        <p>
-                                            {{ isset($page->content['contact_banner']['location']) ? $page->content['contact_banner']['location'] : '' }}
-                                        </p>
-                                    </div>
-                                </div> --}}
                                 <div class="ud-single-info ">
                                     <div class="ud-info-icon ">
                                         <i class="lni lni-envelope "></i>
@@ -265,7 +260,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                     <div class="col-xl-4 col-lg-5 ">
                         <div class="ud-contact-form-wrapper wow fadeInUp " data-wow-delay=".2s ">
                             <h3 class="ud-contact-form-title ">
-                                تواصل معنا
+                                اطلب خدمتك
                             </h3>
                             <form class="ud-contact-form ">
                                 <div class="ud-form-group ">
@@ -399,8 +394,39 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
             margin-left: 24px;
             margin-right: unset;
         }
-
-
+        .overall-image{
+            position: absolute;
+            /* left: 0%; */
+            top: 11%;
+            right: 3%;
+            visibility: hidden;
+        }
+        .banner-heading{
+            position: absolute;
+            top: 35%;
+            right: 6%;
+            width: 49%;
+        }
+        .banner-heading h3
+        {
+            font-size: 2.9em;
+            color: white;
+            font-weight: bolder;
+            text-shadow: 1px 0px #181818;
+        }
+        @media(max-width:900px){
+            .banner-heading h3 {
+                font-size: 1em;
+            }
+            .banner-heading{
+                top: 13%;
+                right: 6%;
+                width: 59%;
+            }
+            .overall-image{
+                top: 6%;
+            }
+        }
     </style>
 @endpush
 
