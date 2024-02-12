@@ -27,7 +27,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                     <h3 class="wow fadeInUp" data-wow-delay=".6s ">
                         منصة واحدة لكل أعمالك التسويقية و الادارية
                     </h3>
-                    <a href="#" class="btn btn_banner wow fadeInUp" data-wow-delay=".9s ">
+                    <a href="#contact" class="btn btn_banner wow fadeInUp" data-wow-delay=".9s ">
                         أضف مشروع
                     </a>
                 </div>
