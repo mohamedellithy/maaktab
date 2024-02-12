@@ -342,9 +342,8 @@ class FrontController extends Controller
     }
 
     public function post_contact_us(ContactUsRequest $request){
-        $adminEmail = 'info@pioneeringstep.com';
+        $adminEmail = 'Belal.ahmad.maani@gmail.com';
         $data = $request->all();
-        $data['phone'] = $data['phone_code'] .$data['phone'];
         if(Mail::to($adminEmail)->send(new ContactMail($data))){
             flash()->success('تم ارسال الرسالة بنجاح ');
             Mail::to($data['email'])->send(new ReplayContactMail($data));
@@ -354,7 +353,7 @@ class FrontController extends Controller
     }
 
     public function post_news_letter(Request $request){
-        $adminEmail = 'info@pioneeringstep.com';
+        $adminEmail = 'Belal.ahmad.maani@gmail.com';
         $data = $request->all();
         if(Mail::to($adminEmail)->send(new NewsLetterMail($data))){
             flash()->success('تم ارسال طلب الاشتراك بنجاح ');

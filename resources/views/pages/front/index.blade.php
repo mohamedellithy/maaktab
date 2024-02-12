@@ -263,25 +263,26 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                             <h3 class="ud-contact-form-title ">
                                 اطلب خدمتك
                             </h3>
-                            <form class="ud-contact-form ">
+                            <form method="post" action="{{ route('send-email') }}" class="ud-contact-form ">
+                                @csrf
                                 <div class="ud-form-group ">
-                                    <label for="fullName ">الاسم بالكامل *</label>
-                                    <input type="text " name="fullName " placeholder="Adam Gelius " />
+                                    <label for="fullName">الاسم بالكامل *</label>
+                                    <input type="text " name="fullName" placeholder="Adam Gelius" />
                                 </div>
                                 <div class="ud-form-group ">
                                     <label for="email ">البريد الالكترونى *</label>
-                                    <input type="email " name="email " placeholder="example@yourmail.com " />
+                                    <input type="email " name="email" placeholder="example@yourmail.com" />
                                 </div>
                                 <div class="ud-form-group ">
                                     <label for="phone ">رقم الجوال *</label>
-                                    <input type="text " name="phone " placeholder="+885 1254 5211 552 " />
+                                    <input type="text " name="phone" placeholder="+885 1254 5211 552" />
                                 </div>
                                 <div class="ud-form-group ">
                                     <label for="message ">ماهو طلبك؟ *</label>
-                                    <textarea name="message " rows="1 " placeholder="قم بتسجيل طلبك"></textarea>
+                                    <textarea name="description" rows="1 " placeholder="قم بتسجيل طلبك"></textarea>
                                 </div>
                                 <div class="ud-form-group mb-0 ">
-                                    <button type="submit " class="ud-main-btn ">
+                                    <button type="submit" class="ud-main-btn ">
                                         ارسال الطلب
                                     </button>
                                 </div>
