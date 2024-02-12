@@ -32,7 +32,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                     </a>
                 </div>
                 <img class="overall-image pc wow fadeInUp" data-wow-delay=".3s " src="{{ asset('banners/5.png') }}"/>
-                <img class="overall-image mobile wow fadeInUp" data-wow-delay=".3s " src="{{ asset('banners/5.png') }}"/>
+                <img class="overall-image mobile wow fadeInUp" data-wow-delay=".3s " src="{{ asset('banners/6.png') }}"/>
             </div>
         </div>
     </section>
