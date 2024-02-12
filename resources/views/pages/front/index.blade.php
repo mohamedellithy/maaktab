@@ -441,7 +441,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
             }
             .banner-heading {
                 top: 12%;
-                right: 7%;
+                right: 10%;
                 width: 80%;
                 text-align: center;
             }
