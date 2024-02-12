@@ -419,7 +419,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
             line-height: 1.6em;
         }
         .banner-heading .btn_banner{
-            background-color: #21cb49;
+            background-color: #ee4935;
             border-radius: 30px;
             padding: 16px 38px;
             margin: 4% 0px;
