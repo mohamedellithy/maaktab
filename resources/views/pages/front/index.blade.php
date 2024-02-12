@@ -24,14 +24,14 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                    <img style="height: 700px;" src="{{ asset('front/assets/images/banner/default-banner-slider.jpg') }}" />
                 @endif
                 <div class="banner-heading">
-                    <h3 class="wow fadeInUp" data-wow-delay=".9s ">
+                    <h3 class="wow fadeInUp" data-wow-delay=".6s ">
                         منصة واحدة لكل أعمالك التسويقية و الادارية
                     </h3>
-                    <a href="#" class="btn btn_banner">
+                    <a href="#" class="btn btn_banner wow fadeInUp" data-wow-delay=".9s ">
                         أضف مشروع
                     </a>
                 </div>
-                <img class="overall-image wow fadeInUp" data-wow-delay=".5s " src="{{ asset('banners/5.png') }}"/>
+                <img class="overall-image wow fadeInUp" data-wow-delay=".3s " src="{{ asset('banners/5.png') }}"/>
             </div>
         </div>
     </section>
