@@ -400,6 +400,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
             position: absolute;
             /* left: 0%; */
             top: 11%;
+            z-index: 5;
             right: 3%;
             visibility: hidden;
         }
@@ -408,6 +409,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
             top: 30%;
             right: 6%;
             width: 49%;
+            z-index: 10;
         }
         .banner-heading h3
         {
