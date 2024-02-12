@@ -439,10 +439,11 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
             .banner-heading h3 {
                 font-size: 1em;
             }
-            .banner-heading{
-                top: 10%;
-                right: 6%;
-                width: 59%;
+            .banner-heading {
+                top: 12%;
+                right: 7%;
+                width: 80%;
+                text-align: center;
             }
             .overall-image{
                 top: 6%;
@@ -454,6 +455,9 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
             }
             .overall-image.mobile{
                 display: block;
+                width: 50%;
+                position: relative;
+                margin: auto;
             }
             .overall-image.pc{
                 display: none;
