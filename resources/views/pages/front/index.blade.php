@@ -433,6 +433,10 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
         .overall-image.pc{
             display: block;
         }
+        .navbar-btn .ud-white-btn {
+            background: white !important;
+            color: black !important;
+        }
         @media(max-width:900px){
             .banner-heading h3 {
                 font-size: 1.5em;
