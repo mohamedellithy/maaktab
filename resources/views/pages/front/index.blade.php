@@ -31,7 +31,8 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                         أضف مشروع
                     </a>
                 </div>
-                <img class="overall-image wow fadeInUp" data-wow-delay=".3s " src="{{ asset('banners/5.png') }}"/>
+                <img class="overall-image pc wow fadeInUp" data-wow-delay=".3s " src="{{ asset('banners/5.png') }}"/>
+                <img class="overall-image mobile wow fadeInUp" data-wow-delay=".3s " src="{{ asset('banners/5.png') }}"/>
             </div>
         </div>
     </section>
@@ -428,6 +429,12 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
             font-size: 17px;
             font-weight: bold;
         }
+        .overall-image.mobile{
+            display: none;
+        }
+        .overall-image.pc{
+            display: block;
+        }
         @media(max-width:900px){
             .banner-heading h3 {
                 font-size: 1em;
@@ -444,6 +451,12 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
             .banner-heading .btn_banner{
                 padding: 6px 15px;
                 font-size: 13px;
+            }
+            .overall-image.mobile{
+                display: block;
+            }
+            .overall-image.pc{
+                display: none;
             }
         }
     </style>
