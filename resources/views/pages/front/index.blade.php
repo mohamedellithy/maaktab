@@ -433,7 +433,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                 font-size: 1em;
             }
             .banner-heading{
-                top: 13%;
+                top: 10%;
                 right: 6%;
                 width: 59%;
             }
