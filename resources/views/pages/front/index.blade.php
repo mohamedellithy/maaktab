@@ -439,6 +439,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
             }
             .overall-image{
                 top: 6%;
+                right: -1%;
             }
             .banner-heading .btn_banner{
                 padding: 6px 15px;
