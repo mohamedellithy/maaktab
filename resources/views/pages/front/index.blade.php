@@ -27,6 +27,9 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
                     <h3 class="wow fadeInUp" data-wow-delay=".9s ">
                         منصة واحدة لكل أعمالك التسويقية و الادارية
                     </h3>
+                    <a href="#" class="btn btn_banner">
+                        أضف مشروع
+                    </a>
                 </div>
                 <img class="overall-image wow fadeInUp" data-wow-delay=".5s " src="{{ asset('banners/5.png') }}"/>
             </div>
@@ -403,16 +406,27 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
         }
         .banner-heading{
             position: absolute;
-            top: 35%;
+            top: 30%;
             right: 6%;
             width: 49%;
         }
         .banner-heading h3
         {
-            font-size: 2.9em;
+            font-size: 4em;
             color: white;
             font-weight: bolder;
-            text-shadow: 1px 0px #181818;
+            text-shadow:2px 2px #444444;
+            line-height: 1.6em;
+        }
+        .banner-heading .btn_banner{
+            background-color: #21cb49;
+            border-radius: 30px;
+            padding: 16px 38px;
+            margin: 4% 0px;
+            color: white;
+            box-shadow: 1px 2px 10px 0px #4e4b4b5c;
+            font-size: 17px;
+            font-weight: bold;
         }
         @media(max-width:900px){
             .banner-heading h3 {
@@ -425,6 +439,10 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
             }
             .overall-image{
                 top: 6%;
+            }
+            .banner-heading .btn_banner{
+                padding: 6px 15px;
+                font-size: 13px;
             }
         }
     </style>
