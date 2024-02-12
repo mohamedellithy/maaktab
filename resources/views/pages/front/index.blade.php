@@ -434,8 +434,8 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
             display: block;
         }
         .navbar-btn .ud-white-btn {
-            background: white !important;
-            color: black !important;
+            background: #ee4935 !important;
+            color: white !important;
         }
         @media(max-width:900px){
             .banner-heading h3 {
