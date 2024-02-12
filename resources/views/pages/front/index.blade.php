@@ -424,7 +424,7 @@ $page = ActivePagesMenus(['slug','=','/'])[0];
             padding: 16px 38px;
             margin: 4% 0px;
             color: white;
-            box-shadow: 1px 2px 10px 0px #4e4b4b5c;
+            box-shadow: 1px 6px 12px 6px #4e4b4b2b;
             font-size: 17px;
             font-weight: bold;
         }
