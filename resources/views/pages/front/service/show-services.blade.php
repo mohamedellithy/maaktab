@@ -56,9 +56,11 @@
                         <a href="{{ url('service/'.$service->slug) }}" class="btn btn-dark btn-sm">
                             تفاصيل الخدمة
                         </a>
-                        <a href="{{ route('application_form',['application_id' => $service->application_id,'selected_id' => $service->id,'selected' => 'service' ]) }}" class="btn btn-primary btn-sm" style="background-color:#692b91;bordeR:1px solid #692b91">
-                            طلب الخدمة
-                        </a>
+                        @if($service->application_id)
+                            <a href="{{ route('application_form',['application_id' => $service->application_id,'selected_id' => $service->id,'selected' => 'service' ]) }}" class="btn btn-primary btn-sm" style="background-color:#692b91;bordeR:1px solid #692b91">
+                                طلب الخدمة
+                            </a>
+                        @endif
                         </div>
                     </div>
                 </div>
